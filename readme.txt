@@ -1,9 +1,8 @@
 === Plugin Name ===
-
+Contributors: Stephanie Land
 Tags: contact form 7, cf7, trackvia
-Requires at least: 4.3
-Tested up to: 4.3
-Stable tag: 1.0
+Requires at least: 4.7.2
+Stable tag: 1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,8 +29,15 @@ Per contact form you could enable TrackVia integration. The submission of the co
 
 == Changelog ==
 
-
+= 1.5 =
+* Updated readme
+= 1.4 =
+* Updated text domain
+= 1.3 =
+* Updated data handling and added a path for the trackvia installation
+= 1.2 =
+* Updated readme
+= 1.1 =
+* Changed text domain
 = 1.0 =
 * Initial commit
-
-

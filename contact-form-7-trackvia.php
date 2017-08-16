@@ -76,6 +76,7 @@ function cf7_trackvia_before_send_mail($contact_form) {
     $record = $api->createRecord($viewid, $data);
 
     }
+    return;
 }
 
 

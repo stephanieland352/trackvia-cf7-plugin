@@ -24,14 +24,6 @@ class cf7_trackvia_settings {
     {
         update_option('cf7_trackvia_user_password', $key);
     }
-// Trackvia View Id
-  public static function getTrackviaViewID() {
-    return get_option('cf7_trackvia_trackvia_view_id');
-  }
-
-  public static function setTrackviaViewID($key) {
-    update_option( 'cf7_trackvia_trackvia_view_id', $key );
-  }
 // User Key
   public static function getUserKey() {
     return get_option('cf7_trackvia_user_key');
@@ -41,13 +33,5 @@ class cf7_trackvia_settings {
     update_option( 'cf7_trackvia_user_key', $key );
   }
 
-    // User Key
-    public static function getContactFormID() {
-        return get_option('cf7_trackvia_contact_form_id');
-    }
-
-    public static function setContactFormID($key) {
-        update_option( 'cf7_trackvia_contact_form_id', $key );
-    }
 
 }

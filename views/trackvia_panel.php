@@ -8,7 +8,7 @@
 
 <div class="contact-form-editor-box-trackvia">
 
-    <p><label for="enable-trackvia"><input type="checkbox" id="enable-trackvia" name="enable-trackvia" class="toggle-form-table" value="1"<?php echo ( ! empty( $trackvia['enable'] ) ) ? ' checked="checked"' : ''; ?> /> <?php echo esc_html( __( 'Enable trackvia processing', 'contact-form-7-trackvia-integration' ) ); ?></label></p>
+    <p><label for="allow-trackvia"><input type="checkbox" id="allow-trackvia" name="allow-trackvia" class="toggle-form-table" value="1"<?php echo ( ! empty( $trackvia['allow'] ) ) ? ' checked="checked"' : ''; ?> /> <?php echo esc_html( __( 'Enable trackvia processing', 'contact-form-7-trackvia-integration' ) ); ?></label></p>
 
     <fieldset>
 
@@ -16,15 +16,15 @@
 
         <table class="form-table">
             <tbody>
-
-            <tr>
+          <tr>
                 <th scope="row">
-                    <label for="entity"><?php echo esc_html( __( 'Entity', 'contact-form-7-trackvia-integration' ) ); ?></label>
+                    <label for="tviewid"><?php echo esc_html( __( 'TrackVia View ID', 'contact-form-7-trackvia-integration' ) ); ?></label>
                 </th>
                 <td>
-                    <input type="text" id="trackvia-entity" name="trackvia-entity" class="large-text code" size="70" value="<?php echo esc_attr( $trackvia['entity'] ); ?>" />
+                    <input type="text" id="trackvia-tviewid" name="trackvia-tviewid" class="large-text code" value="<?php echo $trackvia['tviewid']; ?>" />
                 </td>
-            </tr>
+
+          </tr>
 
 
             </tbody>

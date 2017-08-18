@@ -29,15 +29,7 @@ Per contact form you could enable TrackVia integration. The submission of the co
 
 == Changelog ==
 
-= 1.5 =
-* Updated readme
-= 1.4 =
-* Updated text domain
-= 1.3 =
-* Updated data handling and added a path for the trackvia installation
-= 1.2 =
-* Updated readme
-= 1.1 =
-* Changed text domain
+= 2.0 =
+* Added Per contact form options
 = 1.0 =
 * Initial commit

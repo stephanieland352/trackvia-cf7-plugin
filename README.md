@@ -30,6 +30,8 @@ Per contact form you could enable TrackVia integration. The submission of the co
 
 == Changelog ==
 
+= 2.0 =
+* Added Per contact form options
 
 = 1.0 =
 * Initial commit

@@ -12,7 +12,8 @@
 
     <fieldset>
 
-        <legend><?php echo esc_html( __( "Fill in a trackvia API entity and action. E.g. Entity: Contact, action: create. Use parameters to add additional api parameters e.g. contact_type=Individual&source=wordpress", 'contact-form-7-trackvia-integration' ) ); ?></legend>
+        <legend><?php echo esc_html( __( "
+        Check the box if you want the form data synced with Track via.", 'contact-form-7-trackvia-integration' ) ); ?></legend>
 
         <table class="form-table">
             <tbody>
@@ -25,6 +26,7 @@
                 </td>
 
           </tr>
+
 
 
             </tbody>

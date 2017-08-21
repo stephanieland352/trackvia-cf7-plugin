@@ -59,6 +59,17 @@
             <div class="clear"></div>
           </div>
         </form>
+       <!-- <table>
+            <tr>
+                <th>
+                    This user can view
+                </th>
+                <td>
+                    <?php // getAvailableViews(); ?>
+                </td>
+            </tr>
+        </table> -->
+
       </div>
     </div>
   </div>

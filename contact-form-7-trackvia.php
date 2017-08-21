@@ -78,6 +78,28 @@ function cf7_trackvia_before_send_mail($contact_form) {
 
 }
 
+// Available Views
+function getAvailableViews () {
+    $user_name = cf7_trackvia_settings::getUserName();
+    $user_password = cf7_trackvia_settings::getUserPassword();
+    $user_key = cf7_trackvia_settings::getUserKey();
+
+    if( empty($user_name) || empty($user_password) || empty($user_key)) {
+
+        return;
+    } else {
+        $api = new Api(USER, PASS, USER_KEY);
+        $views = $api->getViewList();
+        echo "<table><tbody><thead><th>List Name</th><th>ViewID</th></thead>";
+        foreach ($views as $view) {
+            echo '<tr><th>'.$view['name'].'</th><td>'.$view['id'].'</td></tr>';
+        }
+        echo '</tbody></table>';
+    }
+
+}
+
+
 function trackvia_contact_form_properties($properties) {
 
     if (!isset($properties['trackvia'])) {

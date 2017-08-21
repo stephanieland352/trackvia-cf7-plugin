@@ -33,9 +33,7 @@ class cf7_trackvia_admin {
     }
 
     public static function display_trackvia_settings_page() {
-        $user_name = cf7_trackvia_settings::getUserName();
-        $user_password = cf7_trackvia_settings::getUserPassword();
-        $user_key = cf7_trackvia_settings::getUserKey();
+
 
         if (isset($_POST['user_name'])) {
             cf7_trackvia_settings::setUserName($_POST['user_name']);
@@ -47,8 +45,12 @@ class cf7_trackvia_admin {
             cf7_trackvia_settings::setUserKey($_POST['user_key']);
         }
 
-        cf7_trackvia_admin::view( 'settings', compact(  'user_name', 'user_password',  'user_key') ); //'trackvia_view_id', 'contact_form_id'
+        cf7_trackvia_admin::view( 'settings'); //, compact(  'user_name', 'user_password',  'user_key', 'trackvia_view_id', 'contact_form_id')
+
     }
+
+
+
 
     public static function view( $name, array $args = array() ) {
         $args = apply_filters( 'cf7_trackvia_view_arguments', $args, $name );
@@ -63,6 +65,7 @@ class cf7_trackvia_admin {
 
         include( $file );
     }
+
 
     /**
      * Add a TrackVia setting panel to the contact form admin section.
@@ -87,21 +90,22 @@ class cf7_trackvia_admin {
     public static function tc7_save_contact_form($contact_form) {
         $properties = $contact_form->get_properties();
         $trackvia = $properties['trackvia'];
+
+
         if ( isset( $_POST['allow-trackvia'] ) ) {
             $trackvia['allow'] = true;
         } else {
             $trackvia['allow'] = false;
         }
 
-
-
         if ( isset( $_POST['trackvia-tviewid'] ) ) {
             $trackvia['tviewid'] = $_POST['trackvia-tviewid'];
         }
 
-
         $properties['trackvia'] = $trackvia;
         $contact_form->set_properties($properties);
+
+        getAvailableViews();
     }
 
     public static function tc7_admin_enqueue_scripts($hook_suffix) {
@@ -114,6 +118,7 @@ class cf7_trackvia_admin {
             array( 'jquery', 'jquery-ui-tabs' )
         );
     }
+
 
 
 }

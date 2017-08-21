@@ -41,9 +41,10 @@ function cf7_trackvia_before_send_mail($contact_form) {
     if ($properties['trackvia']['allow'] == false) {
         return;
     }
-    if (empty($formid)) {
+    if (empty($formid) || empty(USER) || empty(PASS) || empty(USER_KEY)) {
         return;
     }
+
 
     $api = new Api(USER, PASS, USER_KEY);
 

@@ -105,7 +105,6 @@ class cf7_trackvia_admin {
         $properties['trackvia'] = $trackvia;
         $contact_form->set_properties($properties);
 
-        getAvailableViews();
     }
 
     public static function tc7_admin_enqueue_scripts($hook_suffix) {

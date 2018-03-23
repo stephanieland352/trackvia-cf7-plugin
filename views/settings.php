@@ -38,21 +38,7 @@
                 </td>
               </tr>
 
-              <tr>
-                  <th width="20%" align="left" scope="row"><?php esc_html_e('TrackVia View ID', 'contact-form-7-trackvia-integration');?></th>
-                  <td width="5%"/>
-                  <td align="left">
-                      <span><input id="trackvia_view_id" name="trackvia_view_id" type="text" size="15" value="<?php echo esc_attr( cf7_trackvia_settings::getTrackviaViewID() ); ?>" class="regular-text code"></span>
-                  </td>
-              </tr>
 
-              <tr>
-                  <th width="20%" align="left" scope="row"><?php esc_html_e('Contact Form ID', 'contact-form-7-trackvia-integration');?></th>
-                  <td width="5%"/>
-                  <td align="left">
-                      <span><input id="contact_form_id" name="contact_form_id" type="text" size="15" value="<?php echo esc_attr( cf7_trackvia_settings::getContactFormID() ); ?>" class="regular-text code"></span>
-                  </td>
-              </tr>
 
               </tbody>
 
@@ -73,6 +59,17 @@
             <div class="clear"></div>
           </div>
         </form>
+       <!-- <table>
+            <tr>
+                <th>
+                    This user can view
+                </th>
+                <td>
+                    <?php // getAvailableViews(); ?>
+                </td>
+            </tr>
+        </table> -->
+
       </div>
     </div>
   </div>

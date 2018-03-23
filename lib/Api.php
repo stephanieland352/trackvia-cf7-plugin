@@ -161,10 +161,14 @@ class Api extends EventDispatcher {
 
             // throw an \Exception with the returned error message
             throw new \Exception('API Error :: ' . $response['error_description']);
+
+
+
         }
 
         return true;
     }
+
 
 
     /**
